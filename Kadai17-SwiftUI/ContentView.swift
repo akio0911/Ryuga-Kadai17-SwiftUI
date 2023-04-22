@@ -64,6 +64,9 @@ struct ContentView: View {
                         }
                     }
                 }
+                .onDelete { (offsets) in
+                    self.fruits.remove(atOffsets: offsets)
+                }
             }
             .listStyle(.plain)
             .navigationBarTitleDisplayMode(.inline)
